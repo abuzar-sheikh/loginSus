@@ -6,6 +6,7 @@ import Admin from "./Admin";
 import "./index.css";
 import Home from "./Home";
 import ChooseLogin from "./ChooseLogin";
+import TextAreaPage from "./TextAreaPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -14,6 +15,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/login" element={<App />} />
       <Route path="/choose" element={<ChooseLogin />} />
       <Route path="/admin" element={<Admin />} />
+      <Route path="/textarea" element={<TextAreaPage />} /> {/* new */}
+
     </Routes>
   </BrowserRouter>
 );

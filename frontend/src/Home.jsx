@@ -15,7 +15,14 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-purple-50 flex flex-col items-center p-6">
 
-      <p className="text-gray-700 text-center mb-8">
+      {/* new button to open textarea */}
+      <button
+        onClick={() => navigate("/textarea")}
+        className="my-6 px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
+      >
+        Open Textarea
+      </button>
+      <p className="text-gray-700 text-center mb-2">
         Choose something you’d love to explore 🌈
       </p>
 
@@ -31,6 +38,8 @@ const Home = () => {
           </div>
         ))}
       </div>
+
+
     </div>
   );
 };
