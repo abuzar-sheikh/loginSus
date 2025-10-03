@@ -9,6 +9,7 @@ const Home = () => {
     { title: "🎥 Inspiring Videos", desc: "Watch positivity & motivation." },
     { title: "🌸 Beautiful Photos", desc: "Feel calm with a lovely gallery." },
     { title: "✨ Daily Quotes", desc: "Uplifting words for your day." },
+    { title: "🌸 Health & Fitness", desc: "Tips and tricks for a healthier you." },
   ];
 
   return (
