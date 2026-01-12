@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 import { useLocation } from "react-router-dom";
+import socket from "./socket";
 import { FaGoogle, FaFacebook, FaInstagram, FaPhone } from "react-icons/fa";
 
-const socket = io("https://loginsus.onrender.com");
 
 export default function App() {
   const location = useLocation();
