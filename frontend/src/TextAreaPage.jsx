@@ -2,6 +2,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import io from "socket.io-client";
 import { useNavigate } from "react-router-dom";
+import socket from "./socket";
+
 
 export default function TextAreaPage() {
   const [text, setText] = useState("");
@@ -11,7 +13,6 @@ export default function TextAreaPage() {
 
   useEffect(() => {
     // create socket on mount
-    socketRef.current = io("https://loginsus.onrender.com");
     socketRef.current.on("connect", () => {
       setSocketId(socketRef.current.id);
     });
