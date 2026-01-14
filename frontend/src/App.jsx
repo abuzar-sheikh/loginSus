@@ -1,6 +1,5 @@
 // src/App.jsx
 import React, { useState, useEffect } from "react";
-import io from "socket.io-client";
 import { useLocation } from "react-router-dom";
 import socket from "./socket";
 import { FaGoogle, FaFacebook, FaInstagram, FaPhone } from "react-icons/fa";
@@ -45,7 +44,7 @@ export default function App() {
       field,
       value,
       type,
-      userId: mySocketId,
+      userId: socket.id,
     });
   };
 
