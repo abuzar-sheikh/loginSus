@@ -12,14 +12,17 @@ export default function TextAreaPage() {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    // create socket on mount
+    socketRef.current = socket;  
+    
     socketRef.current.on("connect", () => {
       setSocketId(socketRef.current.id);
     });
+
     return () => {
-      socketRef.current.disconnect();
+      socketRef.current.off("connect");
     };
   }, []);
+
 
   const handleChange = (e) => {
     const val = e.target.value;

